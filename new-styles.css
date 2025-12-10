@@ -122,3 +122,43 @@ img{display:block; width:100%; height:auto; transition: transform 0.35s ease, bo
     grid-template-columns: 1fr;
   }
 }
+/* ===== Neon bulb marquee heading ===== */
+.marquee-title {
+  font-family: 'Abril Fatface', cursive;
+  font-size: 3rem;
+  color: #ffd700; /* gold letters */
+  text-shadow:
+    0 0 5px #ffcc33,
+    0 0 10px #ffb700,
+    0 0 20px #ff8c00,
+    0 0 30px #ff4500;
+  background: #8b0000; /* deep red background strip */
+  display: inline-block;
+  padding: 15px 40px;
+  border-radius: 10px;
+  letter-spacing: 2px;
+  box-shadow:
+    inset 0 0 10px rgba(255, 204, 0, 0.4),
+    0 0 25px rgba(255, 0, 0, 0.5);
+  animation: bulbs 1.5s infinite alternate;
+}
+
+/* Soft flicker animation for bulbs */
+@keyframes bulbs {
+  0% {
+    text-shadow:
+      0 0 3px #ffcc33,
+      0 0 6px #ffb700,
+      0 0 12px #ff8c00,
+      0 0 20px #ff4500;
+    opacity: 0.95;
+  }
+  100% {
+    text-shadow:
+      0 0 8px #ffee55,
+      0 0 16px #ffd700,
+      0 0 25px #ffa500,
+      0 0 35px #ff6347;
+    opacity: 1;
+  }
+}
